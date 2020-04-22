@@ -9,6 +9,7 @@ some pre requirements
 refer the following link for guidance -
 
 www.niktechs.wordpress.com.
+___
 
 1.
 ## ARDUINO
@@ -49,6 +50,7 @@ void loop()
 
 _For connection see tutorial on aubtm-20 and arduino interfacing with lcd.
 That takes care of the Arduino side of things. The Android bits are little bit tougher._
+___
 
 2.
 ## The Android project we are going to write is going to have to do a few things:
@@ -87,6 +89,7 @@ Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
  startActivityForResult(enableBluetooth, 0);
 }
 ```
+___
 3.
 Now that we have the bluetooth adapter and know that its turned on we can get a reference to our
 Arduino’s bluetooth device with this code:
@@ -107,6 +110,7 @@ need to change this to match the name of your device
 
 
 ```
+___
 4.
 Armed with the bluetooth device reference we can now connect to it using this code:
 ```
@@ -135,7 +139,7 @@ button. Wire up the send button’s click event and add this code:
  msg += "\n";
  mmOutputStream.write(msg.getBytes());
  ```
- 
+ ___
  5.
  With this we have one way communication established! Make sure the Arduino is plugged in to the
 computer via the USB cable and open the Serial Monitor from within the Arduino IDE. Open the
